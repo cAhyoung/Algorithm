@@ -1,0 +1,21 @@
+trash = int(input())
+
+a = int(trash/10)
+b = int(trash%10)
+
+clean = (a+10*b) * 2
+
+if clean <= 50:
+    print(clean)
+    print("GOOD")
+elif clean > 100:
+    c = clean%100
+    if c <= 50:
+        print(c)
+        print("GOOD")
+    else:
+        print(c)
+        print("OH MY GOD")
+else:
+    print(clean)
+    print("OH MY GOD")
