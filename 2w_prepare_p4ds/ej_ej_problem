@@ -1,0 +1,13 @@
+np.random.seed(32)
+
+a = np.random.random_sample((3,3,3))
+print(a)
+
+n1 = np.random.random_sample((10,10))
+b = np.min(n1)
+c = np.max(n1)
+print(b ,c)
+
+n2 = np.random.rand(30)
+d = np.mean(n2)
+print(d)
