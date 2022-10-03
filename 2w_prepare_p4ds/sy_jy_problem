@@ -1,0 +1,10 @@
+#1
+import numpy as np
+#2
+print(np.__version__)
+#3
+arr = np.zeros(10)
+print(arr)
+#4
+arr[4] = '1'
+print(arr)
