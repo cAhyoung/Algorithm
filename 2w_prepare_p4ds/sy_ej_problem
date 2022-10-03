@@ -1,0 +1,16 @@
+import numpy as np
+#1
+np.random.seed(32)
+
+#2
+arr1 = np.random.random((3,3,3))
+print(arr1)
+
+#3
+arr2 = np.random.random((10,10))
+min = min(map(min, arr2))
+max = max(map(max, arr2))
+print(min , max)
+#4
+arr3 = np.random.random(30)
+print(np.mean(arr3))
