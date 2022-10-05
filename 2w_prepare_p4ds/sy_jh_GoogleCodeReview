@@ -1,0 +1,21 @@
+n = int(input()) #입력 받기
+matrix = [[0]*n for i in range(n)] #0행렬 만들기 [(표현식) for (변수) in (반복가능한 객체) if (조건문)]
+cnt = 0
+
+for i in range(0, n):
+    if i % 2: #나머지가 0이 아닐때
+        for j in range(0, n): #range함수 (start, stop)
+            cnt += 1
+            matrix[i][j] = cnt #1부터 채워짐
+    else: #나머지가 0일때
+        for j in range(n-1, -1, -1): #range함수 (start, stop, step) 거꾸로
+            cnt += 1
+            matrix[i][j] = cnt
+
+#여기까지만 하면
+# [[5, 4, 3, 2, 1], [6, 7, 8, 9, 10], [15, 14, 13, 12, 11], [16, 17, 18, 19, 20], [25, 24, 23, 22, 21]]
+
+for i in range(0, n):
+    for j in range(0, n):
+        print(matrix[j][i], end=' ') #일자로 출력 
+    print()
