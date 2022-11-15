@@ -1,0 +1,26 @@
+n = int(input("데이터의 개수를 입력하세요: ")) #데이터 개수 입력하기
+
+a = [] #1부터 데이터 저장
+#리스트에 저장
+for i in range(n):
+    i += 1
+    a.append(i)
+
+result = 0 #개수 저장
+for u in range(n):
+    point = a[u]
+    i = 0
+    j = u - 1
+    while i < j:
+        if a[i] + a[j] == point: #goodnum 정의
+            if point != i and point != j: #point와 같으면 안됨
+                result += 1
+                break
+            else:
+                i += 1
+                i -= 1
+        else:
+            i += 1
+            j -= 1
+print(result)
+
