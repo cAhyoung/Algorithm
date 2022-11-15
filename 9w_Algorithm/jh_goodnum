@@ -1,0 +1,24 @@
+#수의 개수 입력 _ 정렬 만들기
+n = int(input('수의 개수:'))
+a = list(range(1, n+1))
+result = 0
+
+#a 리스트의 원소를 받는다.
+for k,i in zip(a,a):    
+    #for i in a:
+    find = k
+    j = n - i + 1
+    # i = 1
+#원소에 대한 대소비교
+    if i < j :
+        if i + j > find:
+            j -= 1
+
+        elif i + j < find:
+            i += 1
+#좋은 수 개수 세기
+        else: result += 1
+    
+print(result)
+
+#0이 나온다. 이유는 조금 더 생각해봐야할 듯 하다. 
